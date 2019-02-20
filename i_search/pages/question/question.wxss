@@ -1,0 +1,155 @@
+/* pages/question/question.wxss */
+
+/* 空白行 */
+
+.blank {
+    width: 100%;
+    height: 150rpx;
+}
+
+#question-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 7rpx solid #f7f7f7;
+    padding-bottom: 25rpx;
+}
+
+#question-wrapper image {
+    /* height: 185rpx; */
+    width: 88%;
+    margin-top: 15rpx;
+    margin-bottom: 8rpx;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    height: 60rpx;
+    font-size: 29rpx;
+    color: #0291c9;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    width: 88%;
+    font-size: 24rpx;
+    line-height: 32rpx;
+}
+
+#answer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border-bottom: 7rpx solid #f7f7f7; */
+    padding-bottom: 25rpx;
+}
+
+#answer-wrapper image {
+    width: 88%;
+    margin-top: 15rpx;
+    margin-bottom: 8rpx;
+}
+
+#footer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    bottom: 0;
+    border-top: 4rpx solid #f7f7f7;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 88%;
+    margin-left: 6%;
+}
+
+.icon-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 55rpx;
+    font-size: 20rpx;
+    color: #777;
+}
+
+.icon-group image {
+    height: 50rpx;
+    width: 50rpx;
+    margin: 2rpx;
+}
+
+.icon-group .icon {
+    height: 50rpx;
+    width: 50rpx;
+    margin: 2rpx;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-image: url("http://47.106.227.33/api/images/share.png");
+}
+
+.icon-group .text {
+    background: #fff;
+    color: #777;
+    font-size: 20rpx;
+    margin: 2rpx;
+    padding: 0;
+    height: 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.icon-group button::after {
+    border-radius: 0;
+    border: none;
+}
+
+.icon-group text {
+    height: 24rpx;
+    margin: 2rpx;
+}
+
+.btn-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60rpx;
+    width: 290rpx;
+    border: 1rpx solid #0ab9ff;
+    border-radius: 15rpx;
+    font-size: 25rpx;
+    font-weight: 600;
+    color: #0ab9ff;
+    margin-left: 40rpx;
+}
+
+.btn-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60rpx;
+    width: 290rpx;
+    border: 1rpx solid #0ab9ff;
+    border-radius: 15rpx;
+    font-size: 25rpx;
+    font-weight: 600;
+    background: #0ab9ff;
+    color: #fff;
+    margin-left: 40rpx;
+}

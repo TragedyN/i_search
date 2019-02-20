@@ -1,0 +1,28 @@
+<!--pages/myquestion/myquestion.wxml-->
+
+<!-- 添加部分开始 -->
+<image wx:if='{{problemList.length == 0}}' class='default' src='../../images/mycollection/default.png'></image>
+<!-- 添加部分结束 -->
+
+<view wx:for='{{problemList}}' wx:key='' class='container' bindtap='detail' data-user='{{item}}'>
+    <view class='header'>
+        <view class='header-left'>
+            <image wx:for='{{item.avatars}}' wx:key='' src='{{item}}'></image>
+            <text wx:if='{{item.response_num > 3}}' class='text-first'>等</text>
+            <text class='text-second'>{{item.response_num}}</text>
+            <text class='text-third'>个回答</text>
+        </view>
+        <view class='header-right'>
+            <image style='' src='../../images/myquestion/more.png' catchtap='operate' data-pid='{{item.id}}'></image>
+        </view>
+    </view>
+    <view class='title'>{{item.title}}</view>
+    <image wx:if='{{item.picture}}' class='pic' style='width:{{213*item.ratio}}rpx' catchtap='preview' data-src='{{imagePath+item.picture}}' src='{{imagePath+item.picture}}'></image>
+    <view class='footer'>
+        <text class='footer-left'>{{item.subtime}}</text>
+        <view class='footer-right'>
+            <image src='../../images/online/label.png'></image>
+            <text>{{item.label?item.label:'暂无'}}</text>
+        </view>
+    </view>
+</view>

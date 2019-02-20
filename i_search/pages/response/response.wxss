@@ -1,0 +1,125 @@
+/* pages/response/response.wxss */
+
+.body{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.top-view{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    width: 86%;
+    height: 41%;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    font-size: 27rpx;
+}
+
+.addphoto{
+    width: 86%;
+    height: 30%;
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+}
+
+.square{
+    width: 200rpx;
+    height: 200rpx;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo{
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.square image{
+    height: 94rpx;
+    width: 94rpx;
+}
+
+.square text{
+    font-size: 23rpx;
+}
+
+.btn-group{
+    width: 86%;
+    height: 15%;
+    margin-left: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-left{
+    height: 45rpx;
+    width: 135rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border-radius: 9rpx;
+}
+
+.btn-left image{
+    height: 25rpx;
+    width: 25rpx;
+    margin: 2rpx;
+}
+
+.btn-left text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19rpx;
+    margin: 2rpx;
+}
+
+.btn-right{
+    height: 55rpx;
+    width: 145rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #0aB9FF;
+    border-radius: 9rpx;
+}
+
+.btn-right image{
+    height: 28rpx;
+    width: 28rpx;
+    /* margin: 12rpx; */
+}
+
+.btn-right text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 25rpx;
+    margin: 10rpx;
+    color: #fff;
+}
+
+.bottom-view{
+    width: 100%;
+    height: 45%;
+    background: #eee;
+}
+

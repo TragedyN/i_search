@@ -1,0 +1,117 @@
+/* pages/info/info.wxss */
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 385rpx;
+}
+
+.outter-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200rpx;
+    height: 200rpx;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -100rpx;
+    margin-top: 200rpx;
+}
+
+.authorize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 160rpx;
+    height: 160rpx;
+    background: transparent;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -80rpx;
+    margin-top: 220rpx;
+}
+
+.inner-circle {
+    /* background: #eee; */
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100rpx;
+    margin-top: 385rpx;
+    text-align: center;
+}
+
+.nickname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+    font-size: 31rpx;
+}
+
+.signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    font-size: 24rpx;
+    color: #707070;
+}
+
+.menu {
+    position: absolute;
+    width: 84%;
+    margin-left: 8%;
+    margin-top: 500rpx;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item-left {
+    display: flex;
+    align-items: center;
+    height: 85rpx;
+}
+
+.icon-left {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 7rpx;
+}
+
+.menu-item text {
+    font-size: 29rpx;
+    margin: 10rpx;
+}
+
+.menu-item-right {
+    display: flex;
+    align-items: center;
+    height: 85rpx;
+}
+
+.icon-right {
+    width: 15rpx;
+    height: 30rpx;
+    margin: 10rpx;
+}

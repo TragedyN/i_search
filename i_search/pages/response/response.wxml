@@ -1,0 +1,32 @@
+<!--pages/response/response.wxml-->
+<view class='body'>
+    <view class='top-view'>
+        <textarea placeholder='{{placeholder}}' value='{{inputContent}}' bindinput='onInput'></textarea>
+        <view class='addphoto'>
+            <view wx:if='{{!showImage}}' class='square' bindtap='choosePhoto'>
+                <image src='../../images/response/camera.png'></image>
+                <text>相册/拍照</text>
+            </view>
+            <image wx:if='{{showImage}}' class='photo' src='{{imageSrc}}' bindtap='choosePhoto'></image>
+        </view>
+        <view class='btn-group'>
+            <view wx:if='{{!showLabel}}' class='btn-left' bindtap='addLabel'>
+                <image src='../../images/response/label.png'></image>
+                <text>添加标签</text>
+            </view>
+            <view wx:if='{{showLabel&&!showThatLabel}}' class='btn-left' bindtap='addLabel'>
+                <text>{{label}}</text>
+            </view>
+            <view wx:if='{{showThatLabel}}' class='btn-left'>
+                <text>{{thatLabel}}</text>
+            </view>
+            <view class='btn-right' bindtap='send'>
+                <image src='../../images/response/send.png'></image>
+                <text>发送</text>
+            </view>
+        </view>
+    </view>
+    <view class='bottom-view'>
+    
+    </view>
+</view>

@@ -1,0 +1,33 @@
+<view class='body'>
+    <navigator url='../response/response?op=addproblem'>
+        <image class='addition' src='../../images/online/add.png'></image>
+    </navigator>
+    <view class='banner-container'>
+        <image class='banner' src='../../images/online/banner.png'></image>
+    </view>
+
+    <view wx:for='{{problemList}}' wx:key='' class='question-container' bindtap='detail' data-user='{{item}}'>
+        <view class='userinfo'>
+            <image src='{{item.avatar}}'></image>
+            <view class='info-group'>
+                <text class='username'>{{item.nickname}}</text>
+                <text class='datetime' decode='{{true}}'>{{item.subtime}}</text>
+            </view>
+        </view>
+        <view class='title'>{{item.title}}</view>
+        <view wx:if='{{item.picture}}' class='pic' style='width:{{item.ratio*198}}rpx'>
+            <image catchtap='preview' data-src='{{imagePath+item.picture}}' src='{{imagePath+item.picture}}'></image>
+        </view>
+        <view class='footer'>
+            <view class='people_num'>
+                <image src='../../images/online/label.png'></image>
+                <text>{{item.label?item.label:'暂无标签'}}</text>
+            </view>
+            <view class='answer' catchtap='answer' data-user='{{item}}'>
+                <image src='../../images/online/answer.png'></image>
+                <text>我来回答</text>
+            </view>
+        </view>
+    </view>
+    <view class='blank'></view>
+</view>

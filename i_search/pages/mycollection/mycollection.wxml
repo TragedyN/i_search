@@ -1,0 +1,64 @@
+<view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">搜题</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">问答</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <!-- 搜题 -->
+        <swiper-item>
+            <!-- 添加部分开始 -->
+            <image wx:if='{{collection_q_list.length == 0}}' class='default' src='../../images/mycollection/default.png'></image>
+            <!-- 添加部分结束 -->
+            <scroll-view scroll-y='true' class="scoll-h">
+                <view wx:for='{{collection_q_list}}' wx:key='' class='container' bindtap='jumpToDetail' data-url='{{item.url}}'>
+                    <image class='pic' style='width:{{213 * item.ratio}}rpx' src='{{imagePath + item.answer}}'></image>
+                    <view class='title'>{{item.title}}</view>
+                    <view class='footer'>
+                        <view class='footer-left'>
+                            <image src='../../images/online/label.png'></image>
+                            <text>{{item.label}}</text>
+                        </view>
+                        <image class='footer-right' src='../../images/myquestion/more.png' catchtap='operate_q' data-qid='{{item.qid}}'></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <!-- 问答 -->
+        <swiper-item>
+            <!-- 添加部分开始 -->
+            <image wx:if='{{collection_p_list.length == 0}}' class='default' src='../../images/mycollection/default.png'></image>
+            <!-- 添加部分结束 -->
+            <scroll-view scroll-y='true' class="scoll-h">
+                <view class='container' wx:for='{{collection_p_list}}' wx:key='' bindtap='jumpToDetail' data-url='{{item.url}}'>
+                    <view class='up'>
+                        <view class='left'>
+                            <image src='{{item.avatar}}'></image>
+                            <view class='userInfo'>
+                                <text class='nickname'>{{item.nickname}}</text>
+                                <text class='datetime'>{{item.subtime}}</text>
+                            </view>
+                        </view>
+                        <view class='right'>
+                            <image src='../../images/myquestion/more.png' catchtap='operate_p' data-pid='{{item.pid}}'></image>
+                        </view>
+                    </view>
+                    <view class='mid'>
+                        <view class='title_border'>
+                            <text class='title_q'>{{item.title}}</text>
+                        </view>
+                        <text class='photoView' catchtap='preview' data-src='{{imagePath + item.picture}}'>查看图片</text>
+                    </view>
+                    <view class='down'>
+                        <view class='left'>
+                            <image class='question' src="{{item.picture ? (imagePath + item.picture) : ''}}"></image>
+                        </view>
+                        <view class='right'>
+                            <text class='reply-header'>回复@Reborn：</text>
+                            <text class='reply-content'>{{item.first_response ? item.first_response : '暂无回复'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

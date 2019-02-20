@@ -1,0 +1,59 @@
+<!--pages/info/info.wxml-->
+<image class='background' src='../../images/info/bg.png'></image>
+<view class='outter-circle'>
+    <image class='inner-circle' src='{{avatar}}'></image>
+</view>
+<button wx-if='{{!authorized}}' class='authorize' bindgetuserinfo='getUserInfo' open-type='getUserInfo'></button>
+
+<view class='userinfo'>
+    <text class='nickname'>{{nickname}}</text>
+    <text class='signature'>一句简单的个人介绍</text>
+</view>
+
+<view class='menu'>
+    <view class='menu-item'>
+        <view class='menu-item-left'>
+            <image class='icon-left' src='../../images/info/history.png'></image>
+            <text class='title'>搜题历史</text>
+        </view>
+        <view class='menu-item-right'>
+            <image class='icon-right' src='../../images/info/more.png'></image>
+        </view>
+    </view>
+    <view class='menu-item' bindtap='jumpToMycollection'>
+        <view class='menu-item-left'>
+            <image class='icon-left' src='../../images/info/collection.png'></image>
+            <text class='title'>我的收藏</text>
+        </view>
+        <view class='menu-item-right'>
+            <image class='icon-right' src='../../images/info/more.png'></image>
+        </view>
+    </view>
+    <view class='menu-item' bindtap='jumpToMyproblem'>
+        <view class='menu-item-left'>
+            <image class='icon-left' src='../../images/info/question.png'></image>
+            <text class='title'>我的提问</text>
+        </view>
+        <view class='menu-item-right'>
+            <image class='icon-right' src='../../images/info/more.png'></image>
+        </view>
+    </view>
+    <!-- <view class='menu-item'>
+        <view class='menu-item-left'>
+            <image class='icon-left' src='../../images/info/answer.png'></image>
+            <text class='title'>我的回答</text>
+        </view>
+        <view class='menu-item-right'>
+            <image class='icon-right' src='../../images/info/more.png'></image>
+        </view>
+    </view> -->
+    <view class='menu-item' bindtap='jumpToMyMessage'>
+        <view class='menu-item-left'>
+            <image class='icon-left' src='../../images/info/response.png'></image>
+            <text class='title'>我的消息</text>
+        </view>
+        <view class='menu-item-right'>
+            <image class='icon-right' src='../../images/info/more.png'></image>
+        </view>
+    </view>
+</view>

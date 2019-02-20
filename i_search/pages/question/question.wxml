@@ -1,0 +1,29 @@
+<!--pages/question/question.wxml-->
+<view id='question-wrapper'>
+    <image wx:if='{{showImage}}' style='height:{{660*q_ratio}}rpx' src='{{imageSrc}}'></image>
+    <text class='title'>题目</text>
+    <text class='content'>{{result.title}}</text>
+</view>
+
+<view id='answer-wrapper'>
+    <text class='title'>答案解析</text>
+    <image style='height:{{660*a_ratio}}rpx' src='{{imagePath+result.answer}}'></image>
+</view>
+
+<view class='blank'></view>
+
+<view id='footer'>
+    <view class='footer-wrapper'>
+        <view class='icon-group' bindtap='share'>
+            <!-- <image src='../../images/question/share.png'></image> -->
+            <button class='icon' open-type='share'></button>
+            <button class='text' open-type='share'>分享</button>
+        </view>
+        <view class='icon-group' bindtap='collect'>
+            <image src="../../images/question/collection{{collected?'_active':''}}.png"></image>
+            <text style="color:{{collected?'#1296DB':''}}">收藏</text>
+        </view>
+        <view class='btn-left' bindtap='jumpOnline'>在线求问</view>
+        <view class='btn-right' bindtap='takePhoto'>再拍一题</view>
+    </view>
+</view>

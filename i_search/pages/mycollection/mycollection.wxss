@@ -1,0 +1,318 @@
+/* 默认图 */
+
+.default {
+    position: absolute;
+    height: 500rpx;
+    width: 500rpx;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 选项卡开始 */
+
+.tab-h {
+    height: 80rpx;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.tab-item {
+    margin: 0 36rpx;
+    display: inline-block;
+}
+
+.tab-item.active {
+    color: #4675f9;
+    position: relative;
+}
+
+.tab-item.active:after {
+    content: "";
+    display: block;
+    height: 8rpx;
+    width: 52rpx;
+    background: #4675f9;
+    position: absolute;
+    bottom: 0;
+    left: 5rpx;
+    border-radius: 16rpx;
+}
+
+.item-ans {
+    width: 100%;
+    display: flex;
+    flex-grow: row no-wrap;
+    justify-content: space-between;
+    padding: 30rpx;
+    box-sizing: border-box;
+    height: 180rpx;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    padding-right: 30rpx;
+}
+
+.avatar .img {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar .doyen {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    bottom: -2px;
+    right: 20rpx;
+}
+
+.expertInfo {
+    font-size: 12px;
+    flex-grow: 2;
+    color: #b0b0b0;
+    line-height: 1.5em;
+}
+
+.expertInfo .name {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.askBtn {
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 60rpx;
+    border: 1px solid #4675f9;
+    color: #4675f9;
+}
+
+.tab-content {
+    margin-top: 80rpx;
+}
+
+.scoll-h {
+    color: #666;
+    height: 100%;
+    background: #f7f7f7;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/* 选项卡结束 */
+
+/* [问答]选项卡css开始 */
+
+.up {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 27rpx;
+}
+
+.up .left {
+    display: flex;
+}
+
+.up .left image {
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 50%;
+    margin-left: 11rpx;
+    margin-top: 13rpx;
+}
+
+.up .left .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 20rpx;
+}
+
+.up .left .userInfo text {
+    margin-top: 8rpx;
+}
+
+.up .left .userInfo .datetime {
+    font-size: 20rpx;
+}
+
+.up .right image {
+    height: 29rpx;
+    width: 35rpx;
+    margin-right: 15rpx;
+    margin-top: 5rpx;
+}
+
+.mid {
+    display: flex;
+    font-size: 24rpx;
+}
+
+.mid .title_border {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200rpx;
+    color: #666;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    margin-left: 18rpx;
+    margin-right: 8rpx;
+}
+
+.mid .photoView {
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    color: #1296db;
+}
+
+.down {
+    width: 100%;
+    height: 180rpx;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15rpx;
+}
+
+.down .left {
+    width: 38%;
+    height: 100%;
+    background: #ccc;
+    overflow: hidden;
+    border-top-left-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+}
+
+.down .left image {
+    /* height: 180rpx; */
+    height: 100%;
+    width: 100%;
+}
+
+.down .right {
+    display: flex;
+    flex-direction: column;
+    width: 58%;
+    height: 100%;
+    background: #eee;
+    font-size: 23rpx;
+    border-top-right-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+
+.down .right .reply-header {
+    width: 86%;
+    margin-left: 7%;
+    height: 50rpx;
+    display: flex;
+    align-items: flex-end;
+    color: #1296db;
+}
+
+.down .right .reply-content {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 86%;
+    margin-left: 7%;
+    height: 109rpx;
+    line-height: 34rpx;
+    margin-top: 7rpx;
+}
+
+/* [问答]选项卡css结束 */
+
+/* [搜题]选项卡css开始 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    /* height: 395rpx; */
+    background: #fff;
+    margin-top: 40rpx;
+    margin-left: 6%;
+    border-radius: 7rpx;
+    overflow: hidden;
+}
+
+.pic {
+    width: 100%;
+    height: 213rpx;
+}
+
+.title {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* line-height: rpx; *//* display: flex; */
+    width: 96%;
+    /* height: 55rpx; */
+    font-size: 20rpx;
+    color: #666;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 96%;
+    height: 35rpx;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.footer-right {
+    height: 29rpx;
+    width: 35rpx;
+}
+
+.footer-left {
+    width: 70rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 21rpx;
+}
+
+.footer-left image {
+    height: 25rpx;
+    width: 25rpx;
+}
+
+/* [搜题]选项卡css开始 */

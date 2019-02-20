@@ -1,0 +1,54 @@
+<!--pages/translate/translate.wxml-->
+<view wx:if='{{showResult}}' class='body'>
+    <view class='top-view'>
+        <view class='top-view-header'>
+            <text class='result'>{{result}}</text>
+            <image class='new_word_book' src='../../images/translate/add.png'></image>
+        </view>
+        <view class='top-view-content'>
+            <text class='voice_from'>英</text>
+            <text class='phonetic_symbol'>[{{uk_phonetic}}]</text>
+            <image class='sound' src='../../images/translate/sound.png' bindtap='playUkVoice'></image>
+        </view>
+        <view class='top-view-content'>
+            <text class='voice_from'>美</text>
+            <text class='phonetic_symbol'>[{{us_phonetic}}]</text>
+            <image class='sound' src='../../images/translate/sound.png' bindtap='playUsVoice'></image>
+        </view>
+    </view>
+
+    <view class='center-view'>
+        <view class='center-view-header'>
+            <text class='center-view-title'>单词释义</text>
+        </view>
+        <view class='center-view-content'>
+            <text wx:for='{{explains}}' wx:key=''>{{item}}</text>
+        </view>
+        <view class='dotted-line'></view>
+        <view class='center-view-content'>
+            <text wx:for='{{otherInfo}}' wx:key=''>{{item.wf.name}}：{{item.wf.value}}</text>
+        </view>
+    </view>
+
+    <view class='bottom-view'>
+        <view class='bottom-view-header'>
+            <text class='bottom-view-title'>相关词组</text>
+        </view>
+        <view class='bottom-view-content'>
+            <text wx:for='{{phrases}}' wx:key=''>{{item.key}}：{{item.value}}</text>
+        </view>
+    </view>
+</view>
+
+<view wx:if='{{!showResult}}' class='no-result-container'>
+    <image src='../../images/translate/no_result.png'></image>
+    <text>对不起，暂时还查不到该单词哦！</text>
+</view>
+
+<view class='search-group'>
+    <image src='../../images/translate/search.png'></image>
+    <input placeholder='搜索单词、知识点等任意你想知道的关键词' value='{{keyword}}' bindconfirm='finishInput' bindinput='onInput'></input>
+    <image src='../../images/translate/delete.png' bindtap='clearInput'></image>
+</view>
+
+<image class='camera' src='../../images/translate/camera.png'></image>

@@ -1,0 +1,133 @@
+/* pages/online/online.wxss */
+
+.body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.blank{
+    width: 100%;
+    height: 150rpx;
+}
+
+.addition {
+    position: fixed;
+    height: 90rpx;
+    width: 90rpx;
+    right: 0px;
+    bottom: 0px;
+    margin: 35rpx;
+}
+
+.banner-container {
+    display: flex;
+    width: 100%;
+    height: 300rpx;
+    padding: 5%;
+}
+
+.banner {
+    width: 90%;
+    height: 100%;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 440rpx; */
+    padding-left: 7%;
+}
+
+.userinfo {
+    display: flex;
+    align-items: flex-end;
+    /* height: 25%; */
+    height: 110rpx;
+    width: 86%;
+}
+
+.userinfo image {
+    width: 90rpx;
+    height: 90rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo .info-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 300rpx;
+    height: 90rpx;
+}
+
+.userinfo .username {
+    font-size: 30rpx;
+}
+
+.userinfo .datetime {
+    font-size: 20rpx;
+    color: #707070;
+    margin-top: 10rpx;
+}
+
+.title {
+    /* height: 15%; */
+    height: 66rpx;
+    width: 86%;
+    display: flex;
+    align-items: center;
+    font-size: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pic {
+    /* height: 45%; */
+    height: 198rpx;
+    width: 86%;
+}
+
+.pic image {
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* height: 15%; */
+    height: 66rpx;
+    width: 86%;
+    border-bottom: 1px solid #eee;
+}
+
+.footer view {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    font-size: 20rpx;
+    /* margin-left: 10rpx; */
+    margin-right: 18rpx;
+}
+
+.footer view image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.footer view text {
+    margin-left: 10rpx;
+}
+
+.answer {
+    justify-content: flex-end;
+    color: #1296DB;
+}
+
+.people_num {
+    justify-content: flex-start;
+    color: #707070;
+}

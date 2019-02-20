@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class='main-body'>
+    <image class='background' src='../../images/index/bg.png'></image>
+    <image class='camera' src='../../images/index/camera.png' bindtap='takePhoto'></image>
+    <view class='search-group'>
+        <image src='../../images/index/search.png'></image>
+        <input placeholder='搜索单词、知识点等任意你想知道的关键词' bindconfirm='finishInput' bindinput='onInput'></input>
+    </view>
+</view>
