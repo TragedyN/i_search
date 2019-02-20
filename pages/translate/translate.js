@@ -91,12 +91,7 @@ Page({
 
     // 输入完成
     finishInput: function() {
-        // wx.request({
-        //     url: 'http://47.106.227.33/test.php',
-        //     success: function(res) {
-        //         console.log(res)
-        //     }
-        // })
+
         var that = this
         var ranNum = 1
         wx.request({

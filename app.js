@@ -12,7 +12,7 @@ App({
             success: res => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
                 wx.request({
-                    url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx2319c2027a716fac&secret=6b09614bdf0da94b093e66806c0eb917&js_code=' + res.code + '&grant_type=authorization_code',
+                    url:
                     success: function(res) {
                         that.globalData.openid = res.data.openid
                         that.globalData.session_key = res.data.session_key
@@ -53,11 +53,11 @@ App({
         // 会话密钥
         session_key: '',
         // 翻译API应用ID
-        appKey: "2d8cab6c4ec095fa",
+        appKey: "",
         // 翻译API应用密钥
-        secretKey: "y67hrXpCtzLRjz5xIpCAb65QRbM19R9P",
+        secretKey: "",
         // 团队服务器地址
-        SERVER_URL: "http://twicegram.top/api/",
+        SERVER_URL: "",
         // 页面回跳url
         callbackUrl: ''
     },

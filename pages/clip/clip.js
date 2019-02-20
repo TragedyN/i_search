@@ -158,7 +158,7 @@ Page({
                     var tmpFilePath = res.tempFilePath
                     // 上传图片到python服务器
                     wx.uploadFile({
-                        url: 'http://47.106.227.33:8080/up_photo',
+                        url: '',
                         filePath: res.tempFilePath,
                         name: 'photo',
                         success: function(res) {
@@ -167,11 +167,9 @@ Page({
                             });
                             // 向服务器发起文字识别请求
                             wx.request({
-                                url: 'http://47.106.227.33:8080/ctpn',
+                                url: '',
                                 data: {
-                                    'TraceId': '20180808010101-0000001',
-                                    'FileList': _this.data.savedFilePath,
-                                    'Image': ''
+
                                 },
                                 header: {
                                     'content-type': 'application/json'
